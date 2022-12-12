@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Register</title>
+    
+    <body>
+        <form action="" id="register-form">
+            <div class="register">
+                <h2>Register here</h2>
+                <label>Name:</label>
+                <input class="round" type="text" placeholder = "Enter ur Name" name="name" required><br><br>
+                <label>Email:</label>
+                <input class="round" type="text" placeholder="Enter ur email" name="email" required><br><br>
+                <label>Number:</label>
+                <input class="round" type="number" placeholder="Enter ur number" name="number" required><br><br>
+                <label>password:</label>
+                <input class="round" type="" placeholder="enter password" name="password" required><br><br>
+                <input type ="submit" name= "submit" onclick="submit" class="button">
+                </div>
+        </form>
+
+        <a href="login.html">Login Page</a><br>
+        <a href="forgot.html">Forgot password</a>
+
+        <script  >
+            const form=document.getElementById("register-form");
+            form.addEventListener("submit",function(e) {
+                e.preventDefault();
+                const userData = {
+                    name: form.elements.name.value,
+                    email: form.elements.email.value,
+                    number: form.elements.number.value,
+                    password: form.elements.password.value,
+                };
+                console.log(userData);
+
+                function submit(){
+                    alert("form is submited successfully");
+                }
+                submit();
+           });
+       </script>
+    </body>
+</html> 
+
+    
